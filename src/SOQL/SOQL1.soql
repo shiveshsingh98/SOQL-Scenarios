@@ -1,0 +1,5 @@
+/*
+Retrieve the names of Contacts whose parent Account has at least one Opportunity with Amount > 100,000.
+*/
+
+Select Name from Contact where AccountId != NULL AND AccountId In (Select AccountId from Opportunity where Amount >100000)
