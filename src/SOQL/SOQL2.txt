@@ -1,0 +1,4 @@
+Write SOQL query if possible which correctly returns Account records whose related Contact count is exactly 3 AND whose related Opportunity records have a total Amount (SUM) >=100000
+
+
+Select Id from Account where Id IN (Select AccountId from Contact Group By AccountId Having Count(Id)=3) AND Id IN (Select AccountId from Opportunity Group By AccountId Having SUM(Amount)>=100000)
