@@ -1,0 +1,5 @@
+/*
+Query all account where account has no contact associated with it
+*/
+
+Select Id from Account where Id NOT IN (Select AccountId from Contact where AccountId != NULL)
