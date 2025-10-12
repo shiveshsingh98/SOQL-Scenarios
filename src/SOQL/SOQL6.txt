@@ -1,0 +1,4 @@
+/*
+Show all opportunities closed in the current month.
+*/
+Select Id, Name from Opportunity where ClosedDate = THIS_MONTH
